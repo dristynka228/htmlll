@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление Фильмами</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container my-5">
+    <h1 class="text-center mb-4">Управление Фильмами</h1>
+
+    <div class="card mb-4">
+        <div class="card-body">
+            <form id="movie-form">
+                <div class="mb-3">
+                    <label for="movie-title" class="form-label">Название фильма</label>
+                    <input type="text" class="form-control" id="movie-title" placeholder="Введите название фильма" required>
+                </div>
+                <div class="mb-3">
+                    <label for="movie-genre" class="form-label">Жанр</label>
+                    <input type="text" class="form-control" id="movie-genre" placeholder="Введите жанр" required>
+                </div>
+                <div class="mb-3">
+                    <label for="movie-rating" class="form-label">Рейтинг</label>
+                    <input type="number" class="form-control" id="movie-rating" min="0" max="10" placeholder="Введите рейтинг (0-10)" required>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submit-btn">Добавить фильм</button>
+            </form>
+        </div>
+    </div>
+
+    <h2 class="text-center">Список Фильмов</h2>
+    <ul id="movie-list" class="list-group"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
